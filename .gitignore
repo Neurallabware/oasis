@@ -1,0 +1,35 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Compiled extension binaries
+*.so
+*.pyd
+*.dylib
+*.o
+
+# Test/cache tooling
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Jupyter artifacts
+.ipynb_checkpoints/
+
+# Hydra and experiment outputs
+outputs/
+
+# Editor settings
+.vscode/

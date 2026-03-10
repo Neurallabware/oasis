@@ -1,0 +1,23 @@
+# Main configuration for OASIS deconvolution pipeline
+
+defaults:
+  - model: oasis
+  - data: trace
+  - _self_
+
+# Output directory (managed by Hydra)
+output_dir: ${hydra:runtime.output_dir}
+
+# Evaluation settings
+eval:
+  # Save deconvolution results to npz
+  save_results: true
+  # Generate visualization plots
+  plot: true
+  # Save plots to file (null = display only)
+  save_plot: null
+  # Compute correlation with ground truth (if available)
+  compute_metrics: true
+
+# Verbosity
+verbose: false

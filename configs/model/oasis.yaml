@@ -1,0 +1,43 @@
+# OASIS model configuration
+# AR process parameters for calcium dynamics deconvolution
+
+# AR model order: 1 or 2
+p: 1
+
+# AR coefficients (null = auto-estimate from data)
+# For AR(1): [0.95]
+# For AR(2): [1.7, -0.71]
+g: null
+
+# Noise standard deviation (null = auto-estimate from data)
+sn: null
+
+# Baseline fluorescence (null = auto-estimate)
+bl: null
+
+# Initial calcium value (null = auto-estimate)
+c1: null
+
+# Baseline non-negativity constraint
+bas_nonneg: true
+
+# Sparsity: minimal non-zero activity (spike size threshold)
+# null = standard L1 penalty
+# 0 = auto threshold such that RSS <= sn^2 * T
+# negative = abs(s_min) * sn * sqrt(1 - g)
+s_min: null
+
+# Number of large events for optimizing g (0 = no optimization)
+optimize_g: 0
+
+# Noise estimation method: logmexp, mean, or median
+noise_method: logmexp
+
+# Frequency range for noise PSD estimation (x Nyquist rate)
+noise_range: [0.25, 0.5]
+
+# Number of lags for AR coefficient estimation
+lags: 5
+
+# Fudge factor for reducing time constant bias
+fudge_factor: 1.0

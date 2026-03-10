@@ -1,0 +1,28 @@
+# Data configuration for fluorescence trace input
+
+# Input format: npy, npz, mat, pkl, or synthetic
+format: synthetic
+
+# Path to input file (ignored if format=synthetic)
+path: null
+
+# Key within npz/mat/pkl file containing the trace
+key: "y"
+
+# Frame rate in Hz (for visualization and time axis)
+framerate: 30.0
+
+# --- Synthetic data generation (when format=synthetic) ---
+synthetic:
+  # Number of time bins
+  T: 3000
+  # Noise standard deviation
+  sn: 0.3
+  # Neural firing rate in Hz
+  firerate: 0.5
+  # Baseline fluorescence
+  baseline: 10.0
+  # Random seed for reproducibility
+  seed: 0
+  # Number of traces to generate
+  N: 1
